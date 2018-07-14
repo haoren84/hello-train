@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测点管理</title>
+    <link rel="stylesheet" href="../Resources/jquery-easyui-1.5.5.4/themes/default/easyui.css">
+    <link rel="stylesheet" href="../Resources/jquery-easyui-1.5.5.4/themes/icon.css">
+    <link rel="stylesheet" type="text/css" href="../Resources/jquery-easyui-1.5.5.4/demo/demo.css">
+    <script type="text/javascript" src="../Resources/jquery-easyui-1.5.5.4/jquery.min.js"></script>
+    <script type="text/javascript" src="../Resources/jquery-easyui-1.5.5.4/jquery.easyui.min.js"></script>
+    <style>
+        #search input{
+            margin-left: 5px;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body class="easyui-layout">
+    <div data-options="region:'west',split:true" style="width: 200px;">
+        <ul class="easyui-tree">
+            <li>
+                <span>工程一</span>
+                <ul>
+                    <li><span>项目1</span></li>
+                    <li><span>项目2</span></li>
+                    <li><span>项目3</span></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div data-options="region:'center'">
+        <div id="search" style="padding: 10px;">
+            <label for="pointname">测点名称</label>
+            <input id="pointname" type="text" value="测点_1">
+            <label for="equipment">设备名称</label>
+            <input id="equipment" type="text" value="18040001">
+            <input type="button" value="搜索">
+        </div>
+        <div id="tptabs" class="easyui-tabs" data-options="fit:true">
+            <div title="测点参数设置">
+                <table id="tptable" class="easyui-datagrid"
+                        data-options="
+                        pagination:true,
+                        url:'testpoint_data.json',
+                        method:'get',
+                        border:false,
+                        singleSelect:true,
+                        rownumbers:true,
+                        fit:true,
+                        fitColumns:true">
+                    <thead>
+                        <tr>
+                            <th data-options="field:'usesign',align:'center'" width="60">使用标识</th>
+                            <th data-options="field:'projectname',align:'center'" width="80">项目名称</th>
+                            <th data-options="field:'pointname',align:'center'" width="80">测点名称</th>
+                            <th data-options="field:'alarmparam',align:'center'" width="80">报警参数</th>
+                            <th data-options="field:'equipment',align:'center'">关联设备</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <div title="警报参数设置"></div>
+            <div title="关联设备"></div>
+        </div>
+        
+    </div>
+    <script>
+        $("#search").layout({
+            region: 'north',
+            height: 40,
+        });
+        $("#tptabs").tabs({
+            plain: false,    // tabs朴素
+            narrow: false,  // tabs紧密
+            pill: true, // tabs药丸
+            justified: false// tabs宽度自适应
+        });
+    </script>
+</body>
+</html>

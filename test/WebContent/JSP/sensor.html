@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>传感器管理</title>
+    <link rel="stylesheet" href="../Resources/jquery-easyui-1.5.5.4/themes/default/easyui.css">
+    <link rel="stylesheet" href="../Resources/jquery-easyui-1.5.5.4/themes/icon.css">
+    <link rel="stylesheet" type="text/css" href="../Resources/jquery-easyui-1.5.5.4/demo/demo.css">
+    <script type="text/javascript" src="../Resources/jquery-easyui-1.5.5.4/jquery.min.js"></script>
+    <script type="text/javascript" src="../Resources/jquery-easyui-1.5.5.4/jquery.easyui.min.js"></script>
+    <style>
+        #search input{
+            margin-left: 5px;
+            margin-right: 20px；
+        }
+    </style>
+</head>
+<body class="easyui-layout">
+    <div data-options="region:'west',split:true" style="width: 200px;">
+        <ul class="easyui-tree">
+            <li>
+                <span>传感器管理</span>
+                <ul>
+                    <li><span>传感器</span></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div data-options="region:'center'">
+        <div id="search" style="padding: 10px;">
+            <label for="signid">传感器编号</label>
+            <input id="signid" type="text" value="D1">
+            <label for="signtype">类型</label>
+            <input id="signtype" type="text" value="全部">
+            <input type="button" value="搜索">
+        </div>
+        <div id="tptabs" class="easyui-tabs" data-options="fit:true">
+            <div title="设置">
+                <table class="easyui-datagrid"
+                        data-options="url:'sensor_data.json',method:'get',border:false,singleSelect:true,fit:true,fitColumns:true">
+                    <thead>
+                        <tr>
+                            <th data-options="field:'signid',align:'center'" width="60">编号</th>
+                            <th data-options="field:'signtype',align:'center'" width="80">类型</th>
+                            <th data-options="field:'params',align:'center'" width="80">参数描述</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+        
+    </div>
+    <script>
+        $("#search").layout({
+            region: 'north',
+            height: 40,
+        });
+        $("#tptabs").tabs({
+            plain: false,    // tabs朴素
+            narrow: false,   // tabs紧密
+            pill: false,     // tabs药丸
+            justified: false // tabs宽度自适应
+        });
+    </script>
+</body>
+</html>

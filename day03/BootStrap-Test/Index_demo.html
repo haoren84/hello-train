@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Index</title>
+	<!-- 标题栏小图标 -->
+	<link rel="icon" href="icons/favicon.ico">
+	<link rel="stylesheet" href="Resources/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	<!-- 自定义样式表index.css -->
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	
+	<!-- navbar-inverse class:反色的导航栏 -->
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<!-- 折叠按钮 -->
+		      	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>                        
+		        </button>
+		        <a class="navbar-brand" href="#">博客</a>
+		    </div>
+		    <div class="collapse navbar-collapse" id="myNavbar">
+		      <ul class="nav navbar-nav">
+		        <li class="active"><a href="#">我的主页</a></li>
+		        <li role="presentation" class="dropdown">
+					    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+					      关注 <span class="caret"></span>
+					    </a>
+							  <ul class="dropdown-menu">
+							    <li>
+							    	<a href="#">
+							    		特别关注
+							    		<span class="label label-danger" style="margin-left: 5px;padding-bottom: .2em;">New</span>
+							    	</a>
+							    </li>
+							    <li><a href="#">取消关注</a></li>
+							    <li><a href="#">黑名单</a></li>
+							    <li role="separator" class="divider"></li>
+							    <li><a href="#">分组设置</a></li>
+							  </ul>
+		        </li>
+		        <li><a href="#">粉丝<span class="badge" style="margin-left: 2px;background-color: #faebcc;color: #a94442;">1094</span></a></li>
+		      </ul>
+		      <form class="navbar-form navbar-left">
+		        <div class="form-group">
+		            <input type="text" class="form-control" placeholder="Search">
+		        </div>
+		        <button type="submit" class="btn btn-primary">Search</button>
+		      </form>
+		      <ul class="nav navbar-nav navbar-right">
+		        <li><a href="Signin_demo.html" data-toggle="tooltip" data-placement="bottom" title="登录">Login</a></li>
+		        <li>
+		            <a href="#" data-toggle="modal" data-target="#myModal">Sign Up</a>
+		        </li>
+		      </ul>
+		    </div>
+		</div>
+	</nav>
+	<div class="container">
+		<!-- jumbotron class:巨幕 效果:一块幕布，更大的<h1>标签 -->
+		<!-- jumbotron.less中有jumbotron{margin-bottom: 30px}，故需设置样式“style='margin-bottom: 0'” -->
+		<div class="jumbotron text-center" style="margin-bottom: 0;" role="header">
+			<blockquote>
+				<p class="h1">Index</p>
+			    <small>Hello World!</small>
+			</blockquote>
+		</div>
+	  <div class="row">
+	    <div class="col-sm-4">
+	      <h2>关于我</h2>
+	      <h5>相册:</h5>
+	      <div class="innerImg img-rounded text-center">有图有真相</div>
+	      <p>关于..</p>
+	      <h3>链接</h3>
+	      <p>描述文本。</p>
+	      <ul class="nav nav-pills nav-stacked">
+	        <li class="active"><a href="#">链接 1</a></li>
+	        <li><a href="#">链接 2</a></li>
+	        <li><a href="#">链接 3</a></li>
+	      </ul>
+	      <hr class="hidden-sm hidden-md hidden-lg">
+	    </div>
+	    <div class="col-sm-8 text-center">
+	      <h2>标题</h2>
+	      <h5 class="bg-info">介绍</h5>
+	      <div class="innerImg img-thumbnail">图</div>
+	      <p class="alert alert-info">一些文本..</p>
+	      <br>
+	      <h2>标题</h2>
+	      <h5 class="bg-info">介绍</h5>
+	      <div class="thumbnail">
+		      <div class="innerImg">图</div>
+		      <p class="alert alert-info" style="margin-bottom: 0;">一些文本..</p>
+		    </div>	
+	    </div>
+	  </div>
+	</div>
+	<footer>
+	  <p>Footer</p>
+	</footer>
+	<!-- 模态框 -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document" style="width: 360px;margin-top: 100px;">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel">Sign Up</h4>
+	      </div>
+	      <div class="modal-body">
+	        <form action="" class="form-horizontal">
+	        	<div class="form-group">
+	        		<label for="username" class="col-sm-4 control-label">Username</label>
+	        		<div class="col-sm-8">
+	        			<input type="text" class="form-control" id="username" placeholder="Username">
+	        		</div>
+	        	</div>
+	        	<div class="form-group">
+	        		<label for="email" class="col-sm-4 control-label">E-mail</label>
+	        		<div class="col-sm-8">
+	        			<input type="text" class="form-control" id="email" placeholder="E-mail">
+	        		</div>
+	        	</div>
+	        	<div class="form-group">
+	        		<label for="pwd" class="col-sm-4 control-label">Password</label>
+	        		<div class="col-sm-8">
+	        			<input type="text" class="form-control" id="pwd" placeholder="Password">
+	        		</div>
+	        	</div>
+	        </form>
+	      </div>
+	      <div class="modal-footer">
+	      	<button type="button" class="btn btn-primary">注册</button>
+	        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<script src="Resources/jquery-easyui-1.5.5.4/jquery.min.js"></script>
+	<script src="Resources/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+</body>
+</html>

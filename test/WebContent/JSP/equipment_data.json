@@ -1,0 +1,8 @@
+{"total":100,
+	"rows":[
+	{"signno":18060001,"type":"应变","passageway":4,"gatewayid":18060010,"interval":30,"onlinetime":"2018-06-23 15:25:30","quantity":80},
+	{"signno":18060001,"type":"应变","passageway":4,"gatewayid":18060010,"interval":30,"onlinetime":"2018-06-23 15:25:30","quantity":80},
+	{"signno":18060001,"type":"应变","passageway":4,"gatewayid":18060010,"interval":30,"onlinetime":"2018-06-23 15:25:30","quantity":80},
+	{"signno":18060001,"type":"应变","passageway":4,"gatewayid":18060010,"interval":30,"onlinetime":"2018-06-23 15:25:30","quantity":80},
+	{"signno":18060001,"type":"应变","passageway":4,"gatewayid":18060010,"interval":30,"onlinetime":"2018-06-23 15:25:30","quantity":80}
+]}

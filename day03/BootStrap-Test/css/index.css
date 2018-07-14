@@ -1,0 +1,28 @@
+body {
+  min-height: 75rem;
+  padding-top: 4.5rem;
+}
+.innerImg {
+    height: 200px;
+    width: 100%;
+    background: #aaa;
+}
+
+/* 用户修改bootstrap属性 */
+.bg-info{
+	margin-bottom: 0;
+	padding-bottom: 10px;
+}
+/*
+ * Footer
+ */
+footer {
+  padding: 20px 0;
+  color: #999;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: 1px solid #e5e5e5;
+}
+footer p:last-child {
+  margin-bottom: 0;
+}
